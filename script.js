@@ -1,17 +1,16 @@
-let timeLeft = 5;
-const secondsSpan = document.getElementById('seconds');
+let count = 10;
+const seconds = document.getElementById('seconds');
+const titulo = document.getElementById('main-title');
+const endMessage = document.getElementById('end-message');
 
-function updateCountdown() {
-  secondsSpan.textContent = timeLeft.toString().padStart(2, '0');
-  if (timeLeft > 0) {
-    timeLeft--;
+const interval = setInterval(() => {
+  if (count >= 0) {
+    seconds.textContent = count.toString().padStart(2, '0');
+    count--;
   } else {
-    clearInterval(timer);
-    document.getElementById('main-title').classList.add('hidden');
+    clearInterval(interval);
+    titulo.classList.add('hidden');
     document.getElementById('end-message').classList.remove('hidden');
     document.querySelector('.countdown').style.display = 'none';
   }
-}
-
-const timer = setInterval(updateCountdown, 1000);
-updateCountdown();
+}, 1000);
