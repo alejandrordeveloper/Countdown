@@ -5,7 +5,7 @@ const endMessage = document.getElementById('end-message');
 
 const interval = setInterval(() => {
   if (count >= 0) {
-    seconds.textContent = count.toString().padStart(2, '0');
+     seconds.textContent = count;  //.toString().padStart(2, '0');
     count--;
   } else {
     clearInterval(interval);
