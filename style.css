@@ -246,3 +246,36 @@ section {
   pointer-events: none;
 }
 
+.main-footer {
+  position: fixed;
+  right: 2vw;
+  bottom: 1vw;
+  width: auto;
+  background: rgba(11, 21, 47, 0.85);
+  color: #fff;
+  text-align: right;
+  padding: 0.5rem 1.2rem;
+  font-family: "Unbounded", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  border-radius: 8px 0 0 8px;
+  border-top: none;
+  border-left: 2px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 100;
+}
+
+.main-footer a {
+  color: #F58553;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  font-size: 0.95em;
+}
+
+.main-footer a:hover {
+  color: #DF513D;
+  text-decoration: underline;
+}
+
