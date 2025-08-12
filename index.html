@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+  
     <title>CountDown</title>
   </head>
   <body>
@@ -18,7 +19,7 @@
       <h1 id="main-title">COUNTDOWN FOR EXPLOTION</h1>
       <h1 id="end-message" class="hidden">EXPLOTION</h1>
       <div class="countdown">
-        <div class="time-block">
+        <!-- <div class="time-block">
           <span id="days">00</span>
           <span class="label">Days</span>
         </div>
@@ -29,6 +30,10 @@
         <div class="time-block">
           <span id="minutes">00</span>
           <span class="label">Minutes</span>
+        </div> -->
+        <div class="config">
+          <input id="input-seconds" type="number" min="1" value="10" />
+          <button id="start-btn">Iniciar</button>
         </div>
         <div class="time-block">
           <span id="seconds">00</span>
@@ -36,8 +41,6 @@
         </div>
       </div>
     </section>
-
-   
 
     <div class="mo-fire">
       <svg
@@ -319,6 +322,7 @@
         />
       </svg>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
     <script src="script.js"></script>
   </body>
 </html>

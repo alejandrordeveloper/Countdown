@@ -51,7 +51,8 @@ section {
 
 .countdown {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* <-- columna */
+    align-items: center;    /* <-- centrado horizontal */
     justify-content: center;
     gap: 1rem;
 }
@@ -61,12 +62,13 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 150px;
+    height: 60px; /* <-- MÁS ALTO */
+    background-color: rgba(255, 255, 255, 0.18); /* <-- MÁS SÓLIDO */
     border-radius: 10px;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */ /* <-- QUITADO */
     transition: transform 0.3s;
+    margin-top: 0.5rem;
 }
 
 .time-block:hover {
@@ -74,6 +76,17 @@ section {
     transform: scale(1.05);
 }  
 
+.time-block span.label {
+    font-size: 15px;
+    /* letter-spacing: 2px; */
+    margin-top: 0.2rem;
+}
+
+#seconds {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
 
 /* fire */
 /* SVG FIRE */
@@ -181,3 +194,55 @@ section {
 .hidden {
   display: none;
 }
+
+ .config {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 150px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    /* backdrop-filter: blur(5px); */
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s;
+}
+
+.config input[type="number"] {
+    width: 80px;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.2);
+    color: #222;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+}
+
+.config button {
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #F58553;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.config button:hover {
+    background: #DF513D;
+    transform: scale(1.05);
+}
+
+.mojs-container {
+  z-index: 9999 !important;
+  position: fixed !important;
+  pointer-events: none;
+}
+
